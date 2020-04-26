@@ -69,6 +69,12 @@ public void createNewActor(Actor actor) {
 ## Storage
 The receiver needs some way of storing the received data. To achieve this, a class implementing `ReplicationStorage` is needed. 
 This library provides an implementation that stores the data in memory.
+```
+@Bean
+public InMemoryReplicationStorage<ActorForReplication> inMemoryReplicationStorage() {
+	return new InMemoryReplicationStorage<>();
+}
+```
 
 ## Not yet implemented
 - A `ReplicationStorage` that stores data in a database.
